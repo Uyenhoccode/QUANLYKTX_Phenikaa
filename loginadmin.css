@@ -1,0 +1,80 @@
+.Mau {
+    background-color: rgb(161, 178, 238);
+    border: 2px solid blue;
+    width: 400px;
+    height: 350px;
+    display: flex;
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang bên trong .Mau */
+    border-radius: 40px; /* Tạo độ cong cho phần tủ*/
+    text-align: center;
+  }
+  body {
+    background-image: url(anhnen.jpg);
+    height: 100vh;
+    background-size: cover; /*Căn chỉnh hình ảnh để bao phủ toàn bộ phần tử*/
+    background-repeat: no-repeat; /*Để đảm bảo hình nền chỉ xuất hiện 1 lần*/
+    margin: 0; /* Xóa khoảng trống xung quanh body */
+    display: flex; /* Xóa bỏ hiệu ứng display-block*/
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
+  .Dangnhap h1 {
+    color: rgb(18, 18, 94);
+    font-family: sans-serif;
+  }
+  input {
+    width: 320px;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 30px;
+    border: 1px solid gray;
+    margin-bottom: 20px;
+  }
+  button {
+    width: 350px;
+    height: 50px;
+    background-color: rgb(35, 35, 108);
+    font-size: 22px;
+    border: 1px solid gray;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    font-size: 25px;
+  }
+  
+  a {
+    color: azure;
+    text-decoration: none;
+  }
+  .Dangnhap h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: gray;
+  }
+  
+  .hotro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .ghinho {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
+  .ghinho input[type="checkbox"] {
+    width: 15px; /* Giảm kích thước của checkbox */
+    height: 15px;
+    margin-right: 5px; /* Giảm khoảng cách giữa checkbox và nội dung */
+  }
+  
+  .quenmatkhau a {
+    color: rgb(18, 18, 94);
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  

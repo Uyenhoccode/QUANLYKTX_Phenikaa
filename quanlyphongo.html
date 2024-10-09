@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="qlphongo.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+    <title>Quản lý phòng trọ/Phenikaa</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="tieude">
+            <img src="—Pngtree—pyrolo house black on white_15601826.png" alt="Quản lý KTX logo">        
+            <a href="trangchuadmin.html">Quản lý KTX</a>
+        </div>
+        <div class="sinhvien">
+            <img src="—Pngtree—male avatar white collar black_5434753.png" alt="">
+            <a href="quanlysinhvien.html">Quản lý sinh viên</a>
+        </div>
+        <div class="phongo">
+            <img src="—Pngtree—pyrolo house black on white_15601826.png" alt="">
+            <a href="quanlyphongo.html">Quản lý phòng ở</a>
+        </div>
+        <div class="dichvu">
+            <img src="Remove-bg.ai_1728139434524.png" alt="">
+            <a href="quanlydichvu.html">Quản lý dịch vụ</a>
+        </div>
+        <div class="hotro">
+            <img src="—Pngtree—male avatar white collar black_5434753.png" alt="">
+            <a href="hotrosinhvien.html">Hỗ trợ sinh viên</a>
+        </div>
+
+        <div class = "dangxuat">
+            <a href="kytucxa.html">Đăng xuất</a>
+        </div>
+    </div>
+    <div class="no1">
+        <h1>Quản lý phòng trọ</h1>
+        
+        <div class="actions">
+            <button onclick="showAddRoomForm()">Thêm phòng trọ</button>
+            <button onclick="showEditRoomForm()">Sửa phòng trọ</button>
+            <button onclick="showDeleteRoomForm()">Xóa phòng trọ</button>
+            <button onclick="showAssetManagement()">Quản lý tài sản</button>
+        </div>
+    
+        <div id="roomManagement">
+            <h2>Danh sách phòng trọ</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã phòng</th>
+                        <th>Tên phòng</th>
+                        <th>Số người</th>
+                        <th>Giá phòng</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="roomList">
+                    <!-- Dữ liệu phòng trọ sẽ được thêm vào đây bằng JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    
+        <div id="addRoomForm" style="display:none;">
+            <h2>Thêm phòng trọ</h2>
+            <form onsubmit="addRoom(event)">
+                <label for="roomCode">Mã phòng:</label>
+                <input type="text" id="roomCode" required>
+                <label for="roomName">Tên phòng:</label>
+                <input type="text" id="roomName" required>
+                <label for="capacity">Số người:</label>
+                <input type="number" id="capacity" min="1" required>
+                <label for="price">Giá phòng:</label>
+                <input type="number" id="price" required>
+                <button type="submit">Thêm</button>
+                <button type="button" onclick="hideAddRoomForm()">Hủy</button>
+            </form>
+        </div>
+    
+        <div id="editRoomForm" style="display:none;">
+            <h2>Sửa phòng trọ</h2>
+            <form onsubmit="editRoom(event)">
+                <label for="editRoomCode">Mã phòng:</label>
+                <input type="text" id="editRoomCode" required>
+                <label for="editRoomName">Tên phòng:</label>
+                <input type="text" id="editRoomName" required>
+                <label for="editCapacity">Số người:</label>
+                <input type="number" id="editCapacity" min="1" required>
+                <label for="editPrice">Giá phòng:</label>
+                <input type="number" id="editPrice" required>
+                <button type="submit">Sửa</button>
+                <button type="button" onclick="hideEditRoomForm()">Hủy</button>
+            </form>
+        </div>
+    
+        <div id="deleteRoomForm" style="display:none;">
+            <h2>Xóa phòng trọ</h2>
+            <form onsubmit="deleteRoom(event)">
+                <label for="deleteRoomCode">Mã phòng:</label>
+                <input type="text" id="deleteRoomCode" required>
+                <button type="submit">Xóa</button>
+                <button type="button" onclick="hideDeleteRoomForm()">Hủy</button>
+            </form>
+        </div>
+    
+        <div id="assetManagement" style="display:none;">
+            <h2>Quản lý tài sản phòng trọ</h2>
+            <form onsubmit="manageAssets(event)">
+                <label for="assetRoomCode">Mã phòng:</label>
+                <input type="text" id="assetRoomCode" required>
+                <label for="assetDescription">Mô tả tài sản:</label>
+                <input type="text" id="assetDescription" required>
+                <label for="assetValue">Giá trị tài sản:</label>
+                <input type="number" id="assetValue" required>
+                <button type="submit">Thêm tài sản</button>
+                <button type="button" onclick="hideAssetManagement()">Hủy</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // JavaScript cho các chức năng thêm, sửa, xóa và quản lý tài sản
+    
+        function showAddRoomForm() {
+            document.getElementById('addRoomForm').style.display = 'block';
+            document.getElementById('editRoomForm').style.display = 'none';
+            document.getElementById('deleteRoomForm').style.display = 'none';
+            document.getElementById('assetManagement').style.display = 'none';
+        }
+    
+        function hideAddRoomForm() {
+            document.getElementById('addRoomForm').style.display = 'none';
+        }
+    
+        function showEditRoomForm() {
+            document.getElementById('editRoomForm').style.display = 'block';
+            document.getElementById('addRoomForm').style.display = 'none';
+            document.getElementById('deleteRoomForm').style.display = 'none';
+            document.getElementById('assetManagement').style.display = 'none';
+        }
+    
+        function hideEditRoomForm() {
+            document.getElementById('editRoomForm').style.display = 'none';
+        }
+    
+        function showDeleteRoomForm() {
+            document.getElementById('deleteRoomForm').style.display = 'block';
+            document.getElementById('addRoomForm').style.display = 'none';
+            document.getElementById('editRoomForm').style.display = 'none';
+            document.getElementById('assetManagement').style.display = 'none';
+        }
+    
+        function hideDeleteRoomForm() {
+            document.getElementById('deleteRoomForm').style.display = 'none';
+        }
+    
+        function showAssetManagement() {
+            document.getElementById('assetManagement').style.display = 'block';
+            document.getElementById('addRoomForm').style.display = 'none';
+            document.getElementById('editRoomForm').style.display = 'none';
+            document.getElementById('deleteRoomForm').style.display = 'none';
+        }
+    
+        function hideAssetManagement() {
+            document.getElementById('assetManagement').style.display = 'none';
+        }
+    
+        function addRoom(event) {
+            event.preventDefault();
+    
+        }
+    
+        function editRoom(event) {
+            event.preventDefault();
+
+        }
+    
+        function deleteRoom(event) {
+            event.preventDefault();
+
+        }
+    
+        function manageAssets(event) {
+            event.preventDefault();
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dangki.css" />
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+    <title>Đăng kí ký túc xá sinh viên</title>
+  </head>
+  <body>
+    <div class="dangki">
+      <div class="sign"><h1>Đăng kí ký túc xá</h1></div>
+      <div class="front">
+        <div class="front1">
+          <!-- Họ và Tên -->
+          <label for="text">Họ và tên</label>
+          <input type="text" name="name" placeholder="Họ và tên" required />
+
+          <!-- Khoa -->
+          <label for="Khoa">Khoa</label>
+          <select name="Khoa" id="Khoa" required>
+            <option value="" disabled selected>Chọn khoa</option>
+            <option value="IT">Công nghệ thông tin</option>
+            <option value="qtkd">Quản trị kinh doanh</option>
+            <option value="duoc">Dược</option>
+            <option value="ktoto">Kỹ thuật ô tô</option>
+          </select>
+
+          <!-- Giới tính -->
+          <div class="gender">
+            <label>Giới tính:</label>
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">Nam</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              required
+            />
+            <label for="female">Nữ</label>
+          </div>
+
+          <!-- Tên đăng nhập -->
+          <label for="text">Tên đăng nhập</label>
+          <input
+            type="text"
+            name="username"
+            placeholder="Tên đăng nhập"
+            required
+          />
+        </div>
+
+        <div class="front2">
+          <!-- Số điện thoại -->
+          <label for="tel">Số điện thoại</label>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Số điện thoại"
+            pattern="[0-9]{10}"
+            required
+          />
+
+          <!-- Gmail -->
+          <label for="email">Gmail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Địa chỉ email"
+            required
+          />
+
+          <!-- Ngày sinh -->
+          <label for="date">Ngày tháng năm sinh</label>
+          <input type="date" id="dob" name="dob" required />
+
+          <!-- Mật khẩu -->
+          <label for="password">Mật khẩu</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Mật khẩu"
+            required
+          />
+          <button><a href="https://youtube.com">Đăng kí</a></button>
+          <button><a href="kytucxa.html">Đăng nhập</a></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

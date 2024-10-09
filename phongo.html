@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="phongo.css" />
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+    <title>Đăng ký phòng ký túc xá</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  </head>
+  <body>
+    <!-- Menu -->
+    <div class="menu">
+      <div class="logo">
+        <a href="kytucxa.html">
+          <img src="logo-phenikaa-1.png" alt="logo Trường" />
+        </a>
+      </div>
+      <div class="search">
+        <div class="gioithieu">
+          <a href="trangchu.html">
+            <p>Trang Chủ</p>
+          </a>
+        </div>
+        <div class="noiquy">
+          <a href="noiquy.html">
+            <p>Nội Quy</p>
+          </a>
+        </div>
+        <div class="sinhvien">
+          <a href="sinhvien.html">
+            <p>Sinh Viên</p>
+          </a>
+        </div>
+        <div class="phongo">
+          <a href="phongo.html">
+            <p>Phòng Ở</p>
+          </a>
+        </div>
+        <div class="lienhe">
+          <a href="lienhe.html">
+            <p>Liên Hệ</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nội dung đăng ký phòng -->
+<!-- Nội dung đăng ký phòng -->
+<div class="registration-container">
+    <h2>Đăng ký phòng ký túc xá</h2>
+  
+    <form id="room-registration-form">
+      <div class="form-group">
+        <label for="room-selection">Chọn phòng:</label>
+        <select id="room-selection" name="room-selection">
+          <option value="2-1">Phòng 2 người 1</option>
+          <option value="2-2">Phòng 2 người 2</option>
+          <option value="2-3">Phòng 2 người 3</option>
+          <option value="2-4">Phòng 2 người 4</option>
+          <option value="4-1">Phòng 4 người 1</option>
+          <option value="4-2">Phòng 4 người 2</option>
+          <option value="4-3">Phòng 4 người 3</option>
+          <option value="4-4">Phòng 4 người 4</option>
+          <option value="6-1">Phòng 6 người 1</option>
+          <option value="6-2">Phòng 6 người 2</option>
+          <option value="6-3">Phòng 6 người 3</option>
+          <option value="6-4">Phòng 6 người 4</option>
+          <option value="8-1">Phòng 8 người 1</option>
+          <option value="8-2">Phòng 8 người 2</option>
+          <option value="8-3">Phòng 8 người 3</option>
+          <option value="8-4">Phòng 8 người 4</option>
+        </select>
+      </div>
+  
+      <!-- Add images corresponding to room type -->
+      <div class="room-image-container">
+        <img id="room-image" src="ktx.png" alt="Phòng 2 người" />
+      </div>
+  
+      <div class="form-group">
+        <label for="gender">Giới tính:</label>
+        <select id="gender" name="gender">
+          <option value="male">Nam</option>
+          <option value="female">Nữ</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit">Đăng ký phòng</button>
+        <button type="button" id="cancel-button">Hủy đăng ký phòng</button>
+      </div>
+    </form>
+  
+    <h3>Thanh toán tiền điện, nước</h3>
+    <form id="payment-form">
+      <div class="form-group">
+        <label for="electricity-fee">Tiền điện:</label>
+        <input
+          type="text"
+          id="electricity-fee"
+          name="electricity-fee"
+          placeholder="Nhập số tiền"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="water-fee">Tiền nước:</label>
+        <input
+          type="text"
+          id="water-fee"
+          name="water-fee"
+          placeholder="Nhập số tiền"
+        />
+      </div>
+  
+      <div class="form-group">
+        <button type="submit">Thanh toán</button>
+      </div>
+    </form>
+  
+    <!-- Phần mã QR -->
+    <div id="qr-container" style="text-align: center; margin-top: 20px">
+      <canvas id="qr-canvas"></canvas>
+    </div>
+  </div>
+  
+    <!-- Footer -->
+    <div class="kettrang">
+      <div class="ket1">
+        <div class="map">
+          <div class="iconmap">
+            <img src="2991231.png" alt="" />
+          </div>
+          <div class="diachi">
+            <p>Yên Nghĩa - Hà Đông - Hà Nội</p>
+          </div>
+        </div>
+
+        <div class="hotline">
+          <div class="iconphone">
+            <img src="logodienthoai.jpg" alt="" />
+          </div>
+          <div class="dienthoai">
+            <p>024.629.18118|Hotline tuyển sinh: <br />094.651.1010</p>
+          </div>
+        </div>
+
+        <div class="gmail">
+          <div class="icongmail">
+            <img src="icongmail.jpg" alt="" />
+          </div>
+          <div class="dchigmail">
+            <p>Info@phenikaa-uni.edu.vn</p>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.748538458386!2d105.7461114750295!3d20.962611180670255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452efff394ce3%3A0x391a39d4325be464!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBQaGVuaWthYQ!5e0!3m2!1svi!2s!4v1727196352192!5m2!1svi!2s"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="ket2">
+        <div class="fanpage">
+          <div class="facebook">
+            <div class="iconface">
+              <img src="iconFace.jpg" alt="" />
+            </div>
+            <a href="facebook.com/Daihocphenikaa"
+              >facebook.com/Daihocphenikaa</a
+            >
+          </div>
+
+          <div class="youtube">
+            <div class="iconyoutube">
+              <img src="iconyoutube.jpg" alt="" />
+            </div>
+            <a href="https://www.youtube.com/c/PhenikaaUniversity"
+              >youtube.com/c/PhenikaaUniversity</a
+            >
+          </div>
+
+          <div class="instagram">
+            <div class="iconIG">
+              <img src="iconig.png" alt="" />
+              <a href="https://www.instagram.com/phenikaa_uni/"
+                >instagram.com/phenikaa_uni</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ket3">
+        <div class="thanhphan">
+          <div class="top1">
+            <a href="https://phenikaa-uni.edu.vn/vi/page/lien-he"
+              >Khoa - Trường</a
+            >
+          </div>
+          <div class="top2">
+            <a href="https://phenikaa-uni.edu.vn/vi/page/lien-he"
+              >Viện - Trung Tâm</a
+            >
+          </div>
+          <div class="top3">
+            <a href="https://phenikaa-uni.edu.vn/vi/page/lien-he"
+              >Phòng - Ban</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="phongo.js"></script>
+    <script>
+      document.getElementById("payment-form").onsubmit = function (event) {
+        event.preventDefault();
+
+        const electricityFee = document.getElementById("electricity-fee").value;
+        const waterFee = document.getElementById("water-fee").value;
+
+        const qrData = `Tiền điện: ${electricityFee} VND\nTiền nước: ${waterFee} VND`;
+        const qr = new QRious({
+          element: document.getElementById("qr-canvas"),
+          value: qrData,
+          size: 200,
+        });
+
+        document.getElementById("qr-container").style.display = "block";
+      };
+    </script>
+  </body>
+</html>

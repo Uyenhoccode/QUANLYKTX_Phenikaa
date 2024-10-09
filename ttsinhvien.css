@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh; 
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Thêm màu nền cho toàn bộ trang */
+}
+
+.menu {
+    width: 20%; 
+    background-color: #333; /* Đổi màu nền menu thành màu tối hơn */
+    display: flex;
+    flex-direction: column;
+}
+
+.no1 {
+    display: flex;
+    width: 80%; 
+    background-image: url('top-5-ky-tuc-xa-truong-dai-hoc-trung-quoc-dep-xin-xo-nhat-4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start; /* Căn chỉnh nội dung lên trên */
+    padding: 20px; /* Thêm padding cho phần nội dung */
+}
+
+.no1 h1 {
+    font-size: 36px;
+    font-weight: bold; 
+    color: rgba(241, 103, 11, 0.911);
+    opacity: 0.8;
+    margin-bottom: 20px; /* Thêm khoảng cách dưới tiêu đề */
+}
+
+.tieude {
+    display: flex;
+    align-items: center; 
+    padding: 10px;
+}
+
+.tieude img {
+    width: 50px; 
+    height: 50px; 
+    margin-right: 10px; 
+}
+
+.tieude a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white; /* Đổi màu chữ thành trắng */
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s; /* Thêm hiệu ứng chuyển màu khi hover */
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hiệu ứng hover */
+}
+
+.menu img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white; /* Đổi màu chữ thành trắng */
+}
+
+.dangxuat {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: rgb(8, 8, 71); 
+    font-weight: bold; 
+    padding: 15px; 
+    cursor: pointer; 
+    text-align: center;
+    margin-top: auto; /* Căn chỉnh đăng xuất ở dưới cùng */
+}
+
+.dangxuat a {
+    font-size: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.dangxuat:hover a {
+    color: orange;
+}
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

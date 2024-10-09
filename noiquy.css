@@ -1,0 +1,314 @@
+eqweqwe.menu {
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 50px;
+  width: auto; /* Tự động điều chỉnh chiều rộng theo tỷ lệ */
+  padding-left: 20px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+  background-color: rgb(8, 8, 98); /* Màu nền tìm kiếm */
+  padding: 10px; /* Khoảng cách bên trong */
+  border-radius: 5px; /* Bo góc cho phần tìm kiếm */
+}
+
+.gioithieu,
+.noiquy,
+.sinhvien,
+.phongo,
+.lienhe {
+  border-bottom: 1px solid gray;
+}
+
+.gioithieu :hover,
+.noiquy :hover,
+.sinhvien :hover,
+.phongo :hover,
+.lienhe :hover {
+  color: orange;
+  border-bottom: 1px solid orange;
+}
+
+.search a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.search p {
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+}
+
+/* code phần css của tin tức ở đây !!! */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+header {
+  background-color: #0056b3;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+/* Phần main */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+main h2 {
+  font-size: 1.8em;
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+main p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+main a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+  color: #ff3300;
+}
+
+/* Liên kết đặc biệt */
+main h1 {
+  font-size: 2em;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+main a.special-link {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #e63946;
+  text-align: center;
+  margin: 20px 0;
+  background-color: #f1faee;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+main a.special-link:hover {
+  background-color: #f77f00;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer div {
+  margin: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: orange;
+}
+
+/* Bản đồ */
+.map-container {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Thêm hiệu ứng hover cho các nút */
+button,
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+.kettrang {
+  width: auto;
+  height: 500px;
+  background-color: rgb(8, 8, 98);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.ket1,
+.ket2,
+.ket3 {
+  height: 30%;
+  padding-top: 20px;
+  padding-left: 65px;
+  padding-right: 15px;
+  border-top: 1px solid white;
+}
+
+.kettrang .ket1 .map .iconmap img {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+}
+
+.kettrang .ket1 .map .diachi p {
+  color: white;
+}
+
+.map {
+  display: flex;
+  align-items: center;
+}
+
+.kettrang .ket1 .hotline .iconphone img {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+}
+.hotline {
+  display: flex;
+  align-items: center;
+}
+
+.kettrang .ket1 .hotline .dienthoai p {
+  color: white;
+}
+.gmail {
+  display: flex;
+  align-items: center;
+}
+
+.kettrang .ket1 .gmail .icongmail img {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+}
+
+.dchigmail {
+  color: white;
+}
+
+.map-container {
+  height: 100px; /* Tăng chiều cao của bản đồ để hiển thị tốt hơn */
+  width: 100%; /* Đảm bảo bản đồ chiếm toàn bộ chiều rộng của container */
+  max-width: 600px; /* Giới hạn chiều rộng tối đa để tránh quá lớn */
+  margin: 20px auto; /* Căn giữa bản đồ */
+  border: 1px solid #ccc; /* Thêm đường viền xung quanh bản đồ để làm nổi bật */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng */
+}
+
+.ket2 img {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+}
+
+.facebook {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.fanpage {
+  padding: 15px;
+}
+.fanpage a {
+  text-decoration: none;
+  color: white;
+}
+
+.fanpage a:hover {
+  color: orange;
+}
+
+.youtube {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.instagram {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.thanhphan {
+  padding: 15px;
+}
+.thanhphan a {
+  text-decoration: none;
+  color: white;
+}
+
+.thanhphan a:hover {
+  color: orange;
+}
+
+.top1,
+.top2,
+.top3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

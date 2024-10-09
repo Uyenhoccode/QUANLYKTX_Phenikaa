@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hotrosinhvien.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+    <title>Hỗ trợ sinh viên/Phenikaa</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="tieude">
+            <img src="—Pngtree—pyrolo house black on white_15601826.png" alt="Quản lý KTX logo">        
+            <a href="trangchuadmin.html">Quản lý KTX</a>
+        </div>
+        <div class="sinhvien">
+            <img src="—Pngtree—male avatar white collar black_5434753.png" alt="">
+            <a href="quanlysinhvien.html">Quản lý sinh viên</a>
+        </div>
+        <div class="phongo">
+            <img src="—Pngtree—pyrolo house black on white_15601826.png" alt="">
+            <a href="quanlyphongo.html">Quản lý phòng ở</a>
+        </div>
+        <div class="dichvu">
+            <img src="Remove-bg.ai_1728139434524.png" alt="">
+            <a href="quanlydichvu.html">Quản lý dịch vụ</a>
+        </div>
+        <div class="hotro">
+            <img src="—Pngtree—male avatar white collar black_5434753.png" alt="">
+            <a href="hottrosinhvien.html">Hỗ trợ sinh viên</a>
+        </div>
+
+        <div class = "dangxuat">
+            <a href="kytucxa.html">Đăng xuất</a>
+        </div>
+    </div>
+    <div class="no1">
+        <h1>Hỗ trợ sinh viên</h1>
+        <div class="support-form">
+            <h2>Nhận yêu cầu hỗ trợ của sinh viên</h2>
+            <form action="submit_support_request.php" method="POST">
+                <label for="studentID">Mã sinh viên:</label>
+                <input type="text" id="studentID" name="studentID" required>
+    
+                <label for="supportRequest">Yêu cầu hỗ trợ:</label>
+                <textarea id="supportRequest" name="supportRequest" rows="4" required></textarea>
+    
+                <button type="submit">Gửi yêu cầu</button>
+            </form>
+        </div>
+    
+        <div class="warning-section">
+            <h2>Cảnh báo sinh viên</h2>
+            <form action="send_warning.php" method="POST">
+                <label for="studentIDWarning">Mã sinh viên:</label>
+                <input type="text" id="studentIDWarning" name="studentIDWarning" required>
+    
+                <label for="warningMessage">Nội dung cảnh báo:</label>
+                <textarea id="warningMessage" name="warningMessage" rows="4" required></textarea>
+    
+                <button type="submit">Gửi cảnh báo</button>
+            </form>
+        </div>
+    </div>
+</html>

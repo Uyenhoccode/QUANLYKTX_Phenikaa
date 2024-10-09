@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="qlsinhvien.css" />
+    <title>Quản lý sinh viên/Phenikaa</title>
+    <script>
+      function redirectToPage(event) {
+        event.preventDefault(); // Ngăn chặn hành vi gửi mặc định
+        // Ở đây bạn có thể thực hiện logic gửi dữ liệu đến server nếu cần
+        // Sau đó chuyển hướng
+        window.location.href = "thongtinsinhvien.html"; // Thay đổi "trangmoi.html" thành trang bạn muốn
+      }
+    </script>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="tieude">
+        <img
+          src="—Pngtree—pyrolo house black on white_15601826.png"
+          alt="Quản lý KTX logo"
+        />
+        <a href="trangchuadmin.html">Quản lý KTX</a>
+      </div>
+      <div class="sinhvien">
+        <img src="—Pngtree—male avatar white collar black_5434753.png" alt="" />
+        <a href="quanlysinhvien.html">Quản lý sinh viên</a>
+      </div>
+      <div class="phongo">
+        <img src="—Pngtree—pyrolo house black on white_15601826.png" alt="" />
+        <a href="quanlyphongo.html">Quản lý phòng ở</a>
+      </div>
+      <div class="dichvu">
+        <img src="Remove-bg.ai_1728139434524.png" alt="" />
+        <a href="quanlydichvu.html">Quản lý dịch vụ</a>
+      </div>
+      <div class="hotro">
+        <img src="—Pngtree—male avatar white collar black_5434753.png" alt="" />
+        <a href="hotrosinhvien.html">Hỗ trợ sinh viên</a>
+      </div>
+
+      <div class="dangxuat">
+        <a href="kytucxa.html">Đăng xuất</a>
+      </div>
+    </div>
+    <div class="no1">
+      <div class="container">
+        <h2>Thêm sinh viên</h2>
+        <form
+          action="/add_student"
+          method="POST"
+          onsubmit="redirectToPage(event)"
+        >
+          <label for="studentId">Mã số sinh viên</label>
+          <input type="text" id="studentId" name="studentId" required />
+
+          <label for="name">Họ và tên</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="faculty">Khoa</label>
+          <input type="text" id="faculty" name="faculty" required />
+
+          <label for="dob">Ngày sinh</label>
+          <input
+            type="text"
+            id="dob"
+            name="dob"
+            placeholder="dd/mm/yyyy"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Số điện thoại</label>
+          <input type="text" id="phone" name="phone" required />
+
+          <input type="submit" value="Thêm sinh viên" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
